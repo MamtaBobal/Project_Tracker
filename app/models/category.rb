@@ -9,8 +9,9 @@
 #
 class Category < ApplicationRecord
 
+  self.primary_key = 'cid'
+
   # Associations
   has_many :projects
 
-  self.primary_key = 'cid'
 end

@@ -12,7 +12,7 @@
 class Project < ApplicationRecord
 
   # Associations
-  belongs_to :user
-  belongs_to :category
+  belongs_to :user, primary_key: :user_id
+  belongs_to :category, primary_key: :cid, foreign_key: :cid
 
 end
