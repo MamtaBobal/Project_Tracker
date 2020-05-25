@@ -12,6 +12,9 @@
 #
 class User < ApplicationRecord
 
+  # Associations
+  has_many :projects
+
   def self.encrypt(pass, salt)
     Digest::MD5.hexdigest(pass+salt)
   end
